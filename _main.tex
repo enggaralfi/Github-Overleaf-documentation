@@ -1,0 +1,73 @@
+\documentclass{Academic}
+
+\begin{document}
+%Easy customisation of title page
+%TC:ignore
+\myabstract{\include{abstract}}
+\renewcommand{\myTitle}{Catatan dan tatacara menggunakan git dan github}
+\renewcommand{\MyAuthor}{Enggar Alfianto}
+\renewcommand{\MyDepartment}{Graduate School of Engineering Osaka University}
+\renewcommand{\ID}{1234567}
+\renewcommand{\Keywords}{Keyword 1, Keyword 2, Keyword 3}
+\maketitle
+%\vspace{-1.9em}\noindent\rule{\textwidth}{1pt} %add this line if not using abstract
+\onehalfspacing
+%TC:endignore
+
+\section{Memulai}
+
+\begin{enumerate}
+    \item Buatlah akun pada github
+    \item Buat repository kosong.
+    \item Akan muncul perintah awal di laman tersebut
+    \item Buat file di laptop (fileA.tex).
+    \item Gunakan perintah berikut di laptop:
+    \begin{enumerate}
+        \item \textbf{git init}
+        \item \textbf{git add fileA.tex}
+        \item \textbf{git commit -m "first-commit"}
+        \item \textbf{git branch -M main}
+        \item \textbf{git remote add origin https://github.com/enggaralfi/1.git}
+        \item \textbf{git push -u origin main} \label{push}
+        \item \textbf{git add file} file yang mau di add kemudian diakhiri dengan \textbf{git commit -m "isian komit nya"}
+        \item kemudian kembali ke langkah \ref{push}.
+        \item Jika dalam github sudah ada perubahan, maka perlu di sinkronkan dulu dengan cara \textbf{git pull origin}.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Git push dan pull}
+Apa perbedaan git push dan git pull?
+
+\subsection{git push}
+Seperti namanya git push adalah untuk mendorong. Artinya mendorong apa yang sudah diubah ke repository online.
+
+\subsection{git pull}
+Sedangkan git pull adalah untuk menarik. Yaitu menarik perubahan yang ada di online repository ke dalam laptop kita.
+
+\section{Conclusion}
+Berdasarkan hasil pengamatan dan pembelajaran, menggunakan overleaf dan latex sangatnyaman dan memudahkan pekerjaan kita \cite{einstein}.
+
+% There is a brief and precise description of the context of the work such that it is easy to understand the significance of the conclusions.  
+% Each conclusion is described precisely, and correlates exactly with the evidence discussed in the discussion section.
+% The significance of the work is precisely described.
+% There is no new information that has not been discussed in the rest of the report.
+% The conclusions section correlates precisely with the abstract, and is easy to understand if taken out of context.
+
+
+%TC:ignore
+%\clearpage %add new page for references
+\singlespacing
+\emergencystretch 3em
+\hfuzz 1px
+\printbibliography[heading=bibnumbered]
+% \bibliography{references}
+
+% \clearpage
+% \begin{appendices}
+
+% \section{Here go any appendices!}
+
+% \end{appendices}
+
+%TC:endignore
+\end{document}
